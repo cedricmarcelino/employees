@@ -1,0 +1,33 @@
+<div class="container">
+
+<h1>Edit employee information</h1>
+
+<%= form_with scope: :post, url: update_employee_path(:id => @employee.id), method: "put" do |form| %>
+    <div class="field">
+        <%= form.label :first_name%>:
+        <%= form.text_field :first_name,:value => @employee.first_name%>
+    </div>
+    <div class="field">
+        <%= form.label :middle_name%>:
+        <%= form.text_field :middle_name,:value => @employee.middle_name%>
+    </div>
+    <div class="field">
+        <%= form.label :last_name%>:
+        <%= form.text_field :last_name,:value => @employee.last_name%>
+    </div>
+    <div class="field">
+        <%= form.label :role%>:
+        <%= form.text_field :role,:value => @employee.role%>
+    </div>
+    <div class="field">
+        <%= form.label :salary%>:
+        <%= form.text_field :salary,:value => @employee.salary%>
+    </div>
+    <div class="button">
+        <%= form.submit "Update Employee"%>
+    </div>
+<% end %>
+
+<span><%= link_to "Back", show_all_employees_path%></span>
+
+</div>
