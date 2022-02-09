@@ -3,26 +3,9 @@
 <h1>Add an employee</h1>
 
 <%= form_with scope: :post, url: "/employees" do |form| %>
-    <div class="field">
-        <%= form.label :first_name%>:
-        <%= form.text_field :first_name%>
-    </div>
-    <div class="field">
-        <%= form.label :middle_name%>:
-        <%= form.text_field :middle_name%>
-    </div>
-    <div class="field">
-        <%= form.label :last_name%>:
-        <%= form.text_field :last_name%>
-    </div>
-    <div class="field">
-        <%= form.label :role%>:
-        <%= form.text_field :role%>
-    </div>
-    <div class="field">
-        <%= form.label :salary%>:
-        <%= form.text_field :salary%>
-    </div>
+
+    <%= render partial: "form", :locals => {:employee => @employee , :form => form} %>
+
     <div class="button">
         <%= form.submit "Save"%>
     </div>

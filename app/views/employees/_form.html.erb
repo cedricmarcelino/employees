@@ -1,0 +1,25 @@
+<div class="field">
+    <%= form.label :first_name%>:
+    <%= form.text_field :first_name ,:class => (@employee != nil ? (@employee.errors[:first_name].any? ? "field-with-error" : "") : ""), :value => (@employee != nil ? @employee.first_name : "")%>
+    <%= render partial: "errors", :locals => {:args => :first_name, :employee => @employee}%>
+</div>
+<div class="field">
+    <%= form.label :middle_name%>:
+    <%= form.text_field :middle_name, :class => (@employee != nil ? (@employee.errors[:middle_name].any? ? "field-with-error" : "") : ""), :value => (@employee != nil ? @employee.middle_name : "")%>
+    <%= render partial: "errors", :locals => {:args => :middle_name, :employee => @employee}%>
+</div>
+<div class="field">
+    <%= form.label :last_name%>:
+    <%= form.text_field :last_name, :class => (@employee != nil ? (@employee.errors[:last_name].any? ? "field-with-error" : "") : ""), :value => (@employee != nil ? @employee.last_name : "")%>
+    <%= render partial: "errors", :locals => {:args => :last_name, :employee => @employee}%>
+</div>
+<div class="field">
+    <%= form.label :role%>:
+    <%= form.text_field :role, :class => (@employee != nil ? (@employee.errors[:role].any? ? "field-with-error" : "") : ""), :value => (@employee != nil ? @employee.role : "")%>
+    <%= render partial: "errors", :locals => {:args => :role, :employee => @employee}%>
+</div>
+<div class="field">
+    <%= form.label :salary%>:
+    <%= form.text_field :salary, :class => (@employee != nil ? (@employee.errors[:salary].any? ? "field-with-error" : "") : ""), :value => (@employee != nil ? @employee.salary : "")%>
+    <%= render partial: "errors", :locals => {:args => :salary, :employee => @employee}%>
+</div>

@@ -74,3 +74,15 @@
  input[type=submit] {
      padding: .3em;
  }
+
+ .errors {
+    color: red;
+    font-style: italic;
+    font-size: .8em;
+ }
+
+ .field-with-error {
+    border-color: red;
+    border-style: solid;
+
+ }

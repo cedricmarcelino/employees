@@ -1,0 +1,5 @@
+<% if employee != nil%>
+    <% if employee.errors[args].any?%>
+        <br><span class="errors">⚠ <%= employee.errors[args][0] %></span>
+    <%end%>
+<%end%>

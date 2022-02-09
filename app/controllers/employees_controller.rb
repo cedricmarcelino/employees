@@ -12,6 +12,8 @@ class EmployeesController < ApplicationController
 
         if @employee.save
             redirect_to show_employee_path(:id => @employee.id)
+        else    
+            render :action => 'new'
         end
     end
 
@@ -24,6 +26,8 @@ class EmployeesController < ApplicationController
         @employee.update(post_params)
         if @employee.save
             redirect_to show_employee_path(:id => @employee.id)
+        else    
+            render :action => 'edit'
         end
     end
 
