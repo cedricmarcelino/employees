@@ -1,5 +1,5 @@
 <% if employee != nil%>
     <% if employee.errors[args].any?%>
-        <br><span class="errors">⚠ <%= employee.errors[args][0] %></span>
+        <br><span class="errors">⚠ <%= employee.errors.where(args).first.full_message %></span>
     <%end%>
 <%end%>
