@@ -13,7 +13,7 @@ class EmployeesController < ApplicationController
         if @employee.save
             redirect_to show_employee_path(:id => @employee.id)
         else    
-            render :action => 'new'
+            render 'new'
         end
     end
 
@@ -23,11 +23,10 @@ class EmployeesController < ApplicationController
 
     def update
         @employee = Employee.find params[:id]
-        @employee.update(post_params)
-        if @employee.save
+        if @employee.update(post_params)
             redirect_to show_employee_path(:id => @employee.id)
         else    
-            render :action => 'edit'
+            render 'edit'
         end
     end
 
